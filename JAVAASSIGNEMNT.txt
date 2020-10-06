@@ -1,0 +1,1529 @@
+Q.1
+====================
+class Hello {
+		public static void main(String a[]){
+		System.out.println("hello world!!!");
+		}
+}
+
+Q.2
+====================
+class assig{
+	static public void main(String args[]){
+		int rollNo=100;
+		System.out.println("Roll No = "+rollNo);
+	}
+}
+
+Q.3
+====================
+class D{
+	static public void main(String args[]){
+		boolean x=true;
+		boolean y=false;
+		boolean z = x && y || !(x || y)  ;
+		System.out.println(z);
+	}
+}
+
+class A{
+	static public void main(String args[]){
+		int x=10;
+		int y=x*x+3*x-7;
+		System.out.println(y);
+	}
+}
+
+class B{
+	static public void main(String args[]){
+		int x=10;
+		int y =   ++x + x++;
+		System.out.println(y);
+	}
+}
+
+class C{
+	static public void main(String args[]){
+		int x=10;
+		int y=10;
+		int z = ++x - --y - --x  +  x++ ;
+		System.out.println(z);
+	}
+}
+
+Q.4
+====================
+class assig{
+	static public void main(String args[]){
+		byte x=1;
+		byte y=2;
+		int z=(byte)(x+y); //addition typecasted
+	System.out.println(z);
+	}
+}
+
+
+
+Q.5
+====================
+class assig{
+	static public void main(String args[]){
+		String S=args[0];
+		System.out.println("Welcome "+S);
+	}
+}
+
+Q.6
+====================
+import java.util.Scanner;
+class assig{
+	static public void main(String args[]){
+		Scanner S=new Scanner(System.in);
+		System.out.println("Enter the Radius ");
+		float r=S.nextFloat();
+		float Area=(float)(3.14*r*r);
+		float C=(float)(2*3.14*r);
+		System.out.println("Area= "+Area+"\n"+"Circumference = "+C);
+	}
+}
+
+
+Q.7
+====================
+import java.util.Scanner;
+class marks{
+	static public void main(String args[]){
+	Scanner S=new Scanner(System.in);
+	System.out.println("enter the marks of 5 subjects ");
+	int subject1=S.nextInt();
+	int subject2=S.nextInt();
+	int subject3=S.nextInt();
+	int subject4=S.nextInt();
+	int subject5=S.nextInt();
+	float percent=(float)(subject1+subject2+subject3+subject4+subject5)/500*100;
+	System.out.println("Percentage Marks = "+percent+" %");
+	}
+}
+
+
+Q.8
+====================
+class interest{
+	static public void main(String args[]){
+	Scanner S=new Scanner(System.in);
+	System.out.println("enter the Amount");
+	float Amount=S.nextFloat();
+	System.out.println("enter the rate of intetest");
+	float ROI=S.nextFloat();
+	System.out.println("enter the time period");
+	float Time=S.nextFloat();
+	float SI=(float)(Amount*ROI*Time)/100;
+	System.out.println("Simple Interest= "+SI);
+	}
+}
+
+Q.9
+====================
+class day{
+	static public void main(String args[]){
+		Scanner S=new Scanner(System.in);
+		System.out.println("enter the no of days");
+		int day=S.nextInt();
+		int Year=day/365;
+		int a=day%365;
+		int month=a/30;
+		int days=a%30;
+		System.out.println("Year="+Year+"\n"+"Month="+month+"\n"+
+"Days="+days);
+	}
+}
+
+Q.10
+====================
+class temperature{
+	static public void main(String args[]){
+		Scanner S=new Scanner(System.in);
+		System.out.println("Enter the temperature in Farhenheit");
+		float temp=S.nextFloat();
+		float Dtemp=(float)5*(temp-32)/9 ;
+		System.out.println("Temperature in Celsius="+Dtemp);
+	}
+}
+
+Q.11
+====================
+class swap{
+	public static void main(String args[]){
+		int a=10;
+		int b=20;
+		b=a+b;
+		a=b-a;
+		b=b-a;
+		System.out.println(a +"\n"+b);
+	}
+}
+
+Q.12
+====================
+class GrossSalary{
+	static public void main(String args[]){
+		Scanner S=new Scanner(System.in);
+		System.out.println("enter the salary");
+		int salary=S.nextInt();
+		int HRA;
+		int DA;
+		if(salary<10000){
+			DA=90*salary/100;
+			HRA=10*salary/100;
+			int TotalSalary=salary+DA+HRA;
+			System.out.println("Gross Salary= "+TotalSalary);
+		}
+		if(salary>=10000){
+			DA=98*salary/100;
+			HRA=2000;
+			int TotalSalary=salary+DA+HRA;
+			System.out.println("Gross Salary= "+TotalSalary);
+		}
+	}
+}
+
+Q.13
+====================
+class greatest{
+	public static void main(String args[]){
+		Scanner S=new Scanner(System.in);
+		System.out.println("enter the numbers");
+		int x=S.nextInt();
+		int y=S.nextInt();
+		int z=S.nextInt();
+		if(x>y && x>z){
+			System.out.println("X="+x+ " is greater");
+		}
+		if(y>x && y>z){
+			System.out.println("Y="+y+ " is greater");
+		}
+		if(z>x && z>y){
+			System.out.println("Z="+z+ " is greater");
+		}
+		String S1=(x>y && x>z)?"X="+x+ " is greater":(y>x && y>z)?"Y="+y+   
+                         " is greater":z>x && z>y?"Z="+z+ " is greater":"no one is greater";
+		System.out.println(S1);
+	}
+}
+
+
+Q.14
+====================
+class leapYear{
+	public static void main(String args[]){
+		Scanner S=new Scanner(System.in);
+		System.out.println("Enter the year");
+		int year=S.nextInt();
+		if(year%4==0){
+			System.out.println(year+" is a leap year");
+		}
+		else{
+			System.out.println(year+" is not a leap year");
+		}
+	}
+}
+
+Q.15
+====================
+class Eligibility{
+	static public void main(String args[]){
+		Scanner S=new Scanner(System.in);
+		System.out.println("Enter the gender");
+		char C=S.next().charAt(0);
+		System.out.println("Enter the age");
+		int A=S.nextInt();
+		if(C=='M'||C=='m' && A>21){
+			System.out.println("Male is eligible for marriage");
+		}
+		else if(C=='F'||C=='f' && A>18){
+			System.out.println("Female is eligible for marriage");
+		}
+		else{
+			System.out.println("Not eligible for marriage");
+		}
+}}
+
+Q.16
+====================
+class Table{
+	static public void main(String args[]){
+	Scanner S=new Scanner(System.in);
+	System.out.println("Enter the No");
+	int N=S.nextInt();
+	int i,t;
+	for(i=1;i<=10;i++){
+		t=N*i;
+		System.out.println(N+" * "+i+" = "+t);
+	}
+	}
+}
+
+Q.17
+====================
+class ReverseNo{
+	static public void main(String args[]){
+		Scanner S=new Scanner(System.in);
+		System.out.println("Enter the Number");
+		int n=S.nextInt();
+		int reversed=0;
+		while(n != 0) {
+            		int digit = n % 10;
+            		reversed = reversed * 10 + digit;
+            		n /= 10;
+        	}
+		System.out.println("Reversed Number: " + reversed);
+	}
+}
+
+Q.18
+====================
+class Prime{
+	static public void main(String args[]){
+		Scanner S=new Scanner(System.in);
+		System.out.println("Enter the No");
+		int N=S.nextInt();
+		int i,p=0;
+		for(i=1;i<=N;i++){
+			if(N%i==0){
+				p++;
+			}
+		}
+		if(p==2){
+			System.out.println(N+" is a Prime Number");	
+		}
+		else{
+			System.out.println(N+" is not a Prime Number");	
+		}
+	}
+}
+
+Q.19
+====================
+class Series{
+	static public void main(String args[]){
+		Scanner S=new Scanner(System.in);
+		System.out.println("Enter the Number");
+		int N=S.nextInt();
+		int sum=0;
+		int i,j;
+		for(i=12,j=0;j<N;i=i+10,j++){
+			sum=sum+i;
+		}
+		System.out.println("Sum of series= "+sum);
+	}
+}
+
+Q.20
+====================
+class PrimeBetween{
+	static public void main(String args[]){
+		Scanner S=new Scanner(System.in);
+		System.out.println("Enter the range");
+		int X=S.nextInt();
+		int Y=S.nextInt();
+		int flag,i,j;
+		for( i=X;i<=Y;i++){
+			if(i==0||i==1){
+				continue;
+			}
+			flag=1;
+			for(j=2;j<=i/2;j++){
+				if(i%j==0){
+					flag=0;
+					break;
+				}
+			}
+			if(flag==1){
+				System.out.println(i);
+			}
+		}
+	}
+}
+
+Q.21
+====================
+class Array{
+	static public void main(String args[]){
+		Scanner S=new Scanner(System.in);
+		int array[]=new int[10]; 
+		int sum=0;
+		System.out.println("Enter the 10 element");
+		for(int i=0;i<array.length;i++){
+			array[i]=S.nextInt();
+		}
+		System.out.println("\n");
+		for(int a:array){
+			sum=sum+a;
+		}
+		int avg=sum/10;
+		System.out.println("Sum= "+sum);
+		System.out.println("Average= "+avg);
+	}	
+}
+
+Q.22
+====================
+
+class DescArray{
+	public static void main(String args[]){
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the 10 elements : ");
+		int arr [] = new int [10];
+		for ( int i=0;i<arr.length;i++){
+			arr[i] = sc.nextInt();
+		}
+		System.out.println("Desceding order of array : ");
+		
+		for (int i = 0; i < arr.length; i++) {     
+            for (int j = i+1; j < arr.length; j++) {     
+               if(arr[i] < arr[j]) {    
+                  int temp = arr[i];    
+                   arr[i] = arr[j];    
+                   arr[j] = temp;    
+               }     
+            }     
+        } 
+		
+		for (int a : arr){
+			System.out.print(" "+a+" ");
+		}
+
+
+Q.23
+====================
+class ReverseQ23{
+	public static void main(String args[]){
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the 5 elements : ");
+		int arr [] = new int [5];
+		for ( int i=0;i<arr.length;i++){
+			arr[i] = sc.nextInt();
+		}
+		System.out.println("Reverse order of array : ");
+		
+		for (int i = arr.length-1; i >=0 ; i--) {     
+              		System.out.print(" "+arr[i]+" ");
+        	} 
+		
+	}
+}
+
+
+Q.24
+====================
+class ArraySearch{
+	static public void main(String args[]){
+		Scanner S=new Scanner(System.in);
+		int array[]=new int[5]; 
+		System.out.println("Enter the 5 element");
+		for(int i=0;i<array.length;i++){
+			array[i]=S.nextInt();
+		}
+		System.out.println("\n");
+		System.out.println("Enter the No to be Searched");
+		int num=S.nextInt();
+		int flag=0;
+		for(int i=0;i<array.length;i++){
+			if(array[i]==num){
+				System.out.println("Number is present");
+				flag=1;
+			}
+		}
+		if(flag==0){
+			System.out.println("Number not is present");
+		}
+	}	
+}
+
+Q.25
+====================
+class ArraySum{
+	static public void main(String args[]){
+		Scanner S=new Scanner(System.in);
+		int n=S.nextInt();
+		int array[]=new int[n]; 
+		System.out.println("Enter the  element");
+		for(int i=0;i<array.length;i++){
+			array[i]=S.nextInt();
+		}
+		int sumE=0,sumO=0;
+		System.out.println("\n");
+		for(int i=0;i<array.length;i++){
+			if(i%2==0){
+				sumE=sumE+array[i];
+			}
+			else{
+				sumO=sumO+array[i];
+			}
+		}
+		System.out.println("Sum of even Index="+sumE);
+		System.out.println("Sum of odd Index="+sumO);
+		
+	}	
+}
+
+Q.26
+====================
+class Sum2DArray{
+	static public void main(String args[]){
+		Scanner S=new Scanner(System.in);
+		int arr[][]=new int[5][17];
+		int sum=0;
+		for(int i=0;i<arr.length;i++){
+			for(int j=0;j<arr[i].length;j++){
+				arr[i][j]=S.nextInt();
+			}
+		}
+		for(int ar[]:arr){
+			for(int a:ar){
+				sum=sum+a;
+			}
+		}
+		System.out.println(sum);
+	}
+}
+
+
+Q.27
+====================
+class ArrayQ27{
+	public static void main(String args[]){
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the 10 elements : ");
+		int arr [] = new int [10];
+		for ( int i=0;i<arr.length;i++){
+			arr[i] = sc.nextInt();
+		}
+		
+	for (int i = 0; i <arr.length; i++) {     
+            for (int j = i+1; j < arr.length; j++) {     
+               if(arr[i] < arr[j]) {  
+
+		   int temp = arr[i];    
+                   arr[i] = arr[j];    
+                   arr[j] = temp;   
+		 } 
+		}  
+	} 
+	System.out.println("Greatest="+ arr[0]);
+ 		 System.out.println("Smallest= "+arr[9]);    	
+		
+	}
+}
+
+Q.28
+====================
+class StringArray{
+	public static void main(String args[]){
+		
+		String str[] = {"Shraddha","Shaila","Prajkta","Megha"};
+		
+		for(String a : s){
+			System.out.println(a);
+		}
+	}
+	
+}
+Q.29
+====================
+class MArrayQ29 { 
+    public static void main(String[] args) 
+    { 
+  
+        int[][] arr = { {1, 2}, {3, 4},{5,6},{7,8}}; 
+  
+        for (int i = 0; i < 4; i++) 
+            for (int j = 0; j < 4; j++) 
+                System.out.println("arr[" + i + "][" + j + "] = " + arr[i][j]); 
+    } 
+} 
+Q.30
+====================
+import java.io.*; 
+  
+public class DarrayQ30 { 
+  
+    static void printDiagonalSums(int [][]mat,int n) 
+    { 
+        int principal = 0, secondary = 0; 
+        for (int i = 0; i < n; i++) { 
+            for (int j = 0; j < n; j++) { 
+      
+                
+                if (i == j) 
+                    principal += mat[i][j]; 
+      
+                
+                if ((i + j) == (n - 1)) 
+                    secondary += mat[i][j]; 
+            } 
+        } 
+      
+        System.out.println("Principal Diagonal:"
+                                    + principal); 
+                                      
+        System.out.println("Secondary Diagonal:"
+                                    + secondary); 
+    } 
+  
+    static public void main (String[] args) 
+    { 
+          
+        int [][]a = { { 1, 2, 3 }, 
+                      { 5, 6, 7 },  
+                      { 1, 2, 4 }, }; 
+                      
+        printDiagonalSums(a, 3); 
+    } 
+} 
+
+Q.31
+====================
+class Student{
+	private int rollno;
+	private String name;
+	void setData(int rollno,String name){
+		this.rollno=rollno;
+		this.name=name;
+	}
+	void showData(){
+		System.out.println("Roll NO= "+rollno);
+		System.out.println("Name= "+name);
+	}
+}
+
+class StudentDemo{
+	public static void main(String args[]){
+		Student S=new Student();
+		S.setData(100,"Shraddha");
+		S.showData();
+	}
+}
+
+Q.32
+====================
+class Student{
+	private int rollno;
+	private String name;
+	static int count=0;
+	void setData(int rollno,String name){
+		this.rollno=rollno;
+		this.name=name;
+		count++;
+	}
+}
+
+class StudentDemo{
+	public static void main(String args[]){
+		Student arr[]=new Student[10];
+		Student S=new Student();
+		S.setData(100,"Shraddha");
+		Student S1=new Student();
+		S1.setData(100,"Shraddha");
+		Student S2=new Student();
+		S2.setData(100,"Shraddha");
+		System.out.println(Student.count);
+		
+	}
+}
+
+Q.33
+====================
+class Employee{
+	private int empId;
+	private String empName;
+	void setData(int empId,String empName){
+		this.empId=empId;
+		this.empName=empName;
+		System.out.println("value of this= "+this);
+	}
+	void showData(){
+		System.out.println("Employee ID = "+empId);
+		System.out.println("Employee Name = "+empName);
+	}
+}
+
+class EmployeeDemo{
+	public static void main(String args[]){
+		Employee e1=new Employee();
+		System.out.println("value of e1= "+e1);
+		e1.setData(101,"shraddha");
+		e1.showData();
+	}
+}
+
+Q.34
+====================
+class Circle{
+	private int radius;
+	private float area;
+	void init(int radius){
+		this.radius=radius;
+	}
+	void calculateArea(){
+		 this.area=(float)(2*3.14*radius*radius);
+	}
+	void display(){
+		System.out.println("AREA of Circle= "+area);
+	}
+}
+class CircleDemo{
+	static public void main(String args[]){
+		Circle c=new Circle();
+		c.init(20);
+		c.calculateArea();
+		c.display();
+	}
+}
+
+Q.35
+====================
+import java.util.Scanner;
+class MathOperation{
+	static void add(int x,int y){
+		int sum=x+y;
+		System.out.println("Sum="+sum);
+	}
+	static void subtract(int x,int y){
+		int subtract=x-y;
+		System.out.println("Subtract="+subtract);
+	}
+	static void multiply(int x,int y){
+		int multiply=x*y;
+		System.out.println("Multiply="+multiply);
+	}
+	static void power(int x,int y){
+		int power=1;
+		for(int i=1;i<=y;i++){
+			power=power*x;
+		}
+		System.out.println("Power="+power);
+	}
+}
+class MathOperationDemo{
+	static public void main(String args[]){
+		Scanner S=new Scanner(System.in);
+		System.out.println("Enter the value x ");
+		int x=S.nextInt();
+		System.out.println("Enter the value y ");
+		int y=S.nextInt();
+		MathOperation.add(x,y);
+		MathOperation.subtract(x,y);
+		MathOperation.multiply(x,y);
+		MathOperation.power(x,y);
+	}
+}
+
+Q.36
+====================
+class Mathoperation{
+	static void multiply(int x,int y){
+		int res=x*y;
+		System.out.println("Multiplication of two int= "+res);
+	}
+	static void multiply(float x,float y,float z){
+		float res=(float)(x*y*z);
+		System.out.println("Multiplication of 3 floats= "+res);
+	}
+	static void multiply(int arr[]){
+		int res=1;
+		for(int i=0;i<arr.length;i++){
+			res=res*arr[i];
+		}
+		System.out.println("Multiplication of array elements= "+res);
+	}
+	static void multiply(double x,int y){
+		double res=(double)(x*y);
+		System.out.println("Multiplication of int and double= "+res);
+	}
+}
+
+class OverloadingDemo{
+	public static void main(String args[]){
+		Mathoperation.multiply(2,3);
+		Mathoperation.multiply(2.0f,3.0f,4.0f);
+		Mathoperation.multiply(2,300);	
+		 int arr[] = {3, 1, 2, 5, 4}; 
+		Mathoperation.multiply(arr);
+	}
+}
+
+Q.37
+====================
+class person{
+	int age;
+	String name;
+	person(String name){
+		this.age=18;
+		this.name=name;
+	}
+	person(int age,String name){
+		this.age=age;
+		this.name=name;
+	}
+	void show(){
+		System.out.println("age="+age);
+		System.out.println("name="+name);
+	}
+}
+
+class PersonDemo{
+	static public void main(String args[]){
+		person p=new person("Shende");
+		p.show();
+		person p1=new person(20,"Shraddha");
+		p1.show();
+	}
+}
+
+Q.38
+====================
+class Employee{
+	int empNo;
+	int salary;
+	static int totalSalary=0;
+	static int i=0;
+	Employee(int empNo,int salary){
+		this.empNo=empNo;
+		this.salary=salary;
+		i++;
+		totalSalary=totalSalary+this.salary;
+	}
+}
+
+class EmployeeDemo{
+	public static void main(String args[]){
+		Employee e1=new Employee(10,10000);
+		Employee e2=new Employee(10,10000);
+		System.out.println("Total salary= "+Employee.totalSalary);
+		System.out.println("Total employees= "+Employee.i);
+
+	}
+}
+
+Q.39
+====================
+import java.util.Scanner;
+class Product{
+
+    private int pid;
+    public int price;
+    private int quantity;
+
+    Product(int pid, int price, int quantity){
+        this.pid = pid;
+        this.price = price;
+        this.quantity = quantity;
+    }
+
+    void showData(){
+		
+		System.out.println("PID : " + pid);
+        System.out.println("Price : " + price);
+        System.out.println("Quantity : " + quantity);
+	}
+
+}
+
+class ProductQ39{
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        Product a[] = new Product[5];
+
+        int max = 0;
+
+        for(int i = 0 ; i < a.length; i++){
+            System.out.print("Enter the PID of item "+(i+1)+" : ");
+            int pid = sc.nextInt();
+            System.out.print("Enter the Price of item "+(i+1)+" : ");
+            int price = sc.nextInt();
+            System.out.print("Enter the Quantity of item "+(i+1)+" : ");
+            int quantity = sc.nextInt();
+
+            Product p = new Product(pid,price,quantity);
+            a[i] = p;
+
+            if(i == 0){
+                continue;
+            }
+            if(a[i].price > a[i - 1].price){
+                max = a[i].price;
+            }
+        }
+
+        System.out.println("Max price is : " + max);
+    }
+
+}
+
+Q.40
+======
+package Assignment;
+
+import java.util.Scanner;
+
+class Student{
+	String name;
+	int rollno;
+	int age;
+	int score;
+	public Student( String name,int rollno, int age, int score) {
+		//super();
+		this.name = name;
+		this.rollno = rollno;
+		this.age = age;
+		this.score = score;
+	}
+	int getScore() {
+		return score;
+	}
+	@Override
+	public String toString() {
+		
+		return name;
+	}
+	
+}
+
+public class Q40 {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		Student record[]=new Student[2];
+		
+		for(int i=0;i<record.length;i++) {
+			System.out.print("enter name :");
+			String name=sc.next();
+			System.out.print("enter Roll No. :");
+			int  rollno = sc.nextInt();
+			System.out.print("enter Age :");
+			int age=sc.nextInt();
+			System.out.print("enter Scores :");
+			int score=sc.nextInt();
+			
+			record[i]=new Student(name,rollno,age,score);
+		}
+		System.out.println();
+		System.out.print("Students Having Marks Between 0-50 : ");
+		for(Student a:record) {
+			if(a.getScore()>=0&&a.getScore()<50)
+			System.out.println(a);
+		}
+		System.out.println();
+		System.out.print("Students Having Marks Between 50-65 : ");
+		for(Student a:record) {
+			if(a.getScore()>=50&&a.getScore()<65)
+			System.out.println(a);
+		}
+		System.out.println();
+		System.out.print("Students Having Marks Between 65-80 : ");
+		for(Student a:record) {
+			if(a.getScore()>=65&&a.getScore()<80)
+			System.out.println(a);
+		}
+		System.out.println();
+		System.out.print("Students Having Marks Between 80-100 : ");
+		for(Student a:record) {
+			if(a.getScore()>=80&&a.getScore()<=100)
+			System.out.println(a);
+		}
+		
+
+	}
+
+}
+
+
+
+
+Q.41
+=================
+package Assignment;
+
+class Demo{
+	int rollno;
+	int mark;
+	String name;
+	Demo(){
+		System.out.println("0 parameter Constrctor called");
+	}
+	Demo(int rollno){
+		this();
+		System.out.println("1 parameter Constrctor called");
+		
+	}
+	Demo(int rollno,int mark){
+		this(rollno);
+		System.out.println("2 parameter Constrctor called");
+		
+	}
+	Demo(int rollno,int mark,String name){
+		this(rollno,mark);
+		System.out.println("3 parameter Constrctor called");
+		
+	}
+}
+
+public class Q41 {
+
+	public static void main(String[] args) {
+		Demo d=new Demo(20,45,"shradha");
+
+	}
+
+}
+
+Q.42
+===============
+
+package Assignment;
+
+import java.util.Scanner;
+
+class Tile{
+	 int edgelength;
+	 Tile( int edgelength){
+		 this.edgelength= edgelength;
+	 }
+
+	 public int getEdgeLength() {
+		 return edgelength;
+	 }
+	
+}
+class Floor extends Tile{
+	int Flength;
+	int Fwidth;
+    Floor(int edgelength,int flength, int fwidth) {
+		super(edgelength);
+		Flength = flength;
+		Fwidth = fwidth;
+	}
+
+
+
+	void totalTiles(Tile t) {
+		int NoOfTiles;
+		NoOfTiles=(Flength*Fwidth)/(t.getEdgeLength()*t.getEdgeLength());
+		System.out.println("Total Number of Tiles Required = "+NoOfTiles);
+	}
+}
+
+public class Q42 {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter length of Tile :");
+		int edgelength=sc.nextInt();
+		System.out.print("Enter length of Floor :");
+		int Flength=sc.nextInt();
+		System.out.print("Enter breadth of Floor :");
+		int Fwidth=sc.nextInt();
+		
+		Floor f=new Floor(edgelength,Flength,Fwidth);
+		f.totalTiles(f);
+	}
+
+}
+
+Q.43
+======================
+package Assignment;
+class OneBHK{
+	int Roomarea;
+	int Hallarea;
+	static int Price;
+	
+	OneBHK(){
+		Price=0;
+		Roomarea=0;
+		Hallarea=0;
+	}
+	public OneBHK(int roomarea, int hallarea, int price) {
+		
+		Roomarea = roomarea;
+		Hallarea = hallarea;
+		Price = price;
+	}
+	void show() {
+		System.out.println("RoomArea = "+Roomarea);
+		System.out.println("Hallarea = "+Hallarea);
+		System.out.println("Price = "+Price);
+
+	}
+}
+
+class TwoBHK extends OneBHK{
+	int room2Area;
+	TwoBHK(){
+		room2Area=0;
+	}
+	
+	public TwoBHK(int roomarea,int room2Area, int hallarea, int price) {
+		super(roomarea,hallarea,price);
+		this.room2Area = room2Area;
+	}
+
+	void show() {
+		super.show();
+		System.out.println("Room2Area = "+room2Area);
+	}
+	
+}
+
+public class Q43 {
+
+	public static void main(String[] args) {
+
+		OneBHK o=new OneBHK(12,45,7854);
+		o.show();
+		System.out.println("===========================");
+		TwoBHK t1=new TwoBHK(13,14,456,70000);
+	
+		TwoBHK t2=new TwoBHK(13,14,456,70000);
+	
+		TwoBHK t3=new TwoBHK(13,14,456,70000);
+		
+		t1.show();
+		System.out.println("===========================");
+		t2.show();
+		System.out.println("===========================");
+		t3.show();
+		System.out.println("===========================");
+		System.out.println("Total Price = "+(t1.Price+t2.Price+t3.Price));
+		
+	}
+
+}
+
+Q.44
+==============
+class Faculty{
+    private int facultyId;
+    private float salary;
+
+    void input(int facultyId){
+        this.facultyId = facultyId;
+    }
+
+    void printSalary(float salary){
+        System.out.println("Faculty ID : " + facultyId + "  Salary : " + salary);
+    }
+}
+
+
+class FullTimeFaculty extends Faculty{
+    private float basicSalary;
+    private float allowance;
+
+    void input(int facultyId,float basicSalary,float allowance){
+        super.input(facultyId);
+        this.basicSalary = basicSalary;
+        this.allowance = allowance;
+    }
+
+    void printSalary(){
+        float salary;
+        salary = basicSalary + allowance;
+        System.out.print("Salary of Full time faculty : ");
+        super.printSalary(salary);
+    }
+}
+
+class PartTimeFaculty extends Faculty{
+    private int workingHours;
+    private float ratePerHour;
+
+    void input(int facultyId, int workingHours,float ratePerHour){
+        super.input(facultyId);
+        this.workingHours = workingHours;
+        this.ratePerHour = ratePerHour;
+    }
+
+     void printSalary(){
+        float salary;
+        salary = workingHours * ratePerHour;
+        System.out.print("Salary of Part time faculty : ");
+        super.printSalary(salary);
+    }
+}
+
+class FacultyQ44{
+    public static void main(String args[]){
+
+        FullTimeFaculty ft = new FullTimeFaculty();
+        ft.input(101,5000f,250f);
+        ft.printSalary();
+
+        PartTimeFaculty pt = new PartTimeFaculty();
+        pt.input(102,6,100f);
+        pt.printSalary();
+    }
+}
+Q.45
+==============
+import java.util.Scanner;
+class Student{
+    private int rollNo;
+    private float percentage;
+
+    Student(){
+        rollNo = 0;
+        percentage = 0;
+    }
+
+    Student(int rollNo,float percentage){
+        this.rollNo = rollNo;
+        this.percentage = percentage;
+    }
+
+    public int getRollNo() {
+		return rollNo;
+	}
+
+    public double getPercentage() {
+		return percentage;
+	}
+
+    void show(){
+        System.out.println("RollNo : " + rollNo + " Percentage " + percentage);
+    }
+}
+
+class CollegeStudent extends Student{
+    private int semester;
+
+    CollegeStudent(){
+        super();
+        semester = 0;
+    }
+
+    CollegeStudent(int rollNo,float percentage,int semester){
+        super(rollNo,percentage);
+        this.semester = semester;
+    }
+
+    void show(){
+        super.show();
+        System.out.println("Semester " + semester);
+    }
+}
+
+class SchoolStudent extends Student{
+    private String className;
+
+    SchoolStudent(){
+        super();
+        className = null;
+    }
+
+    SchoolStudent(int rollNo,float percentage,String className){
+        super(rollNo,percentage);
+        this.className = className;
+    }
+
+    void show(){
+        super.show();
+        System.out.println("Class Name : " + className);
+    }
+}
+
+class StudentQ45{
+    public static void main(String args[]){
+       
+       Student s[] = {
+                        new CollegeStudent(101,65.5f,2),
+                        new CollegeStudent(104,75.80f,5),
+                        new SchoolStudent(108,95.27f,"10th"),
+                        new SchoolStudent(112,80.66f,"12th"),
+                        new SchoolStudent(120,40.45f,"11th")
+                    };
+
+        for(Student i : s){
+            i.show();
+        }
+
+        Scanner sc = new Scanner(System.in);
+		System.out.println("Enter roll no : ");
+		int rn = sc.nextInt();
+
+        for(Student i : s) {
+			if(i.getRollNo() == rn) {
+				System.out.println(rn +" is Present");
+			}
+        }	
+
+        for(Student i : s){
+			if(i.getPercentage() >= 75) {
+				System.out.println(i.getRollNo()+" has A grade ");
+			}
+		}
+
+    }
+}
+
+Q.46
+==============
+class Person{
+	void getDetail(){
+		System.out.println("person details");
+	}
+	void getJob(){
+		System.out.println("person job");
+	}
+}
+class Employee extends Person{
+	void getJob(){
+		System.out.println("employee job");
+	}
+	void getDept(){
+		System.out.println("employee dept");
+	}
+}
+class DownCastQ46{
+	public static void main(String args[]){
+		Person ar[] = {new Employee(),new Person()}; 
+		for(Person a : ar){
+			if(a instanceof Employee){
+			  Employee e = (Employee)a;
+			  e.getDept();
+			}
+		}
+	}
+}
+
+Q.47
+==============
+package Assignment;
+class ConstructChainDemo{
+	String s;
+	int n;
+	float f;
+	ConstructChainDemo(){
+		this("hello world");
+	}
+	ConstructChainDemo(String s){
+		this(s,5);
+	}
+	ConstructChainDemo(String s,int n){
+		this(s,n,12.25f);
+	}
+	ConstructChainDemo(String s,int n,float f){
+		this.s=s;
+		this.n=n;
+		this.f=f;
+		System.out.println(s+" "+n+" "+f);
+	}
+}
+public class Q47 {
+
+	public static void main(String[] args) {
+		ConstructChainDemo ccd=new ConstructChainDemo();
+	}
+
+}
+
+Q.58
+===============
+package ExceptionDemo;
+
+import java.util.Scanner;
+
+public class demo3 {
+
+	public static void main(String[] args) {
+		String weekdays[]=new String[7];
+		weekdays[0]="sunday";
+		weekdays[1]="monday";
+		weekdays[2]="tueday";
+		weekdays[3]="wedday";
+		weekdays[4]="thurday";
+		weekdays[5]="friday";
+		weekdays[6]="satday";
+		Scanner sc=new Scanner(System.in);
+		try {
+		int index=sc.nextInt();
+		System.out.println(weekdays[index]);
+	
+		
+		}
+		catch(ArrayIndexOutOfBoundsException e) {
+			e.printStackTrace();
+			System.out.println("Enter valid day index in the range 0 to 6");
+		}
+		
+
+	}
+
+}
+
+
+
+
+
+Q.59
+=======
+package ExceptionDemo;
+
+import java.io.IOException;
+import java.util.Scanner;
+
+class Voter{
+	int VoterId;
+	int age;
+	String name;
+	public Voter(int voterId, int age, String name)throws IOException {
+		//super();
+		VoterId = voterId;
+		this.age = age;
+		this.name = name;
+		if(this.age<18)
+			throw new IOException("invalid age for voter ");
+		System.out.println("Eligible age for voter");
+	}
+	
+}
+
+public class Demo1 {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int voterId=sc.nextInt();
+		int age=sc.nextInt();
+		String name=sc.next();
+		try {
+		Voter v=new Voter(voterId,age,name);
+		}
+		catch(IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+}
+
+
+Q.60
+=========
+package ExceptionDemo;
+
+import java.util.Scanner;
+
+class InvalidFeeException extends Exception{
+	InvalidFeeException(String str){
+		super(str);
+	}
+}
+
+interface StudentFee {
+	void getFee(int fee)throws InvalidFeeException;
+}
+class ChildClass implements StudentFee {
+	public void getFee(int fee) throws InvalidFeeException {
+		if(fee>100000 || fee<0)
+			throw new InvalidFeeException("Invalid Fees");
+		else
+			System.out.println("Valid Fees");
+	}
+}
+public class demo2 {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int fee=sc.nextInt();
+		try {
+		ChildClass c=new ChildClass();
+		c.getFee(fee);
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+}
+
+
+Q.61
+=========
+package MultithreadingDemo;
+
+import java.util.Scanner;
+
+class Starthread extends Thread{
+	int num;
+	public Starthread(int num) {
+		//super();
+		this.num = num;
+	}
+	public void run() {
+		for(int i=0;i<num;i++) {
+			for(int j=0;j<12;j++) {
+				System.out.print("*");
+			}
+			System.out.println();
+			try {
+				sleep(1000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+			
+		}
+	}
+
+public class Demo4 {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int x=sc.nextInt();
+		Starthread s=new Starthread(x);
+		s.start();
+
+	}
+
+}
+
+
+
+Q.62
+=========
+package MultithreadingDemo;
+
+import java.util.Scanner;
+
+class PrimeNoCheckThread implements Runnable{
+	public void run() {
+		Scanner sc=new Scanner(System.in);
+		int num=sc.nextInt();
+		int flag=0;
+		
+	    for(int i=2;i<num;i++) {
+	    	if(num % i==0) {
+	    		flag=1;
+	    		break;
+	    	}
+	    }
+	    if(flag==0) {
+	    	System.out.println(num+" is a prime number");
+	    }
+	   else
+	  	System.out.println(num+" is  a not prime number");
+	   }
+}
+
+public class Demo3 {
+
+	public static void main(String[] args) {
+		PrimeNoCheckThread m=new PrimeNoCheckThread();
+	   Thread p=new Thread(m);
+		p.start();
+	
+
+	}
+
+}
