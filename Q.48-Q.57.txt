@@ -1,0 +1,525 @@
+Q.48
+===============
+import java.util.Scanner;
+abstract class Processor{
+    int data;
+    void showData(double data){
+        System.out.println("Result : " + data);
+    }
+    abstract void process(); 
+}
+
+class Factorial extends Processor{
+    Scanner sc = new Scanner(System.in);
+
+    int fNo = sc.nextInt();
+ 
+    void process(){
+        int fact = 1;
+        for(int i=1;i<=fNo;i++){
+            fact *= i;
+        }
+        super.showData(fact);
+    }
+    
+} 
+
+class Circle extends Processor{
+    Scanner sc = new Scanner(System.in);
+    double radius = sc.nextDouble();
+
+    final double pi = 3.14;
+
+    void process(){
+        double area = pi * radius * radius;
+        super.showData(area);
+    }
+
+    
+}
+
+class AbstractQ48{
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter your choice:");
+        System.out.println("1.Factorial");
+        System.out.println("2.Area");
+        int n = sc.nextInt();
+
+        switch(n){
+            case 1 :
+                System.out.println("Enter the Number : ");
+                Factorial f = new Factorial();
+                f.process();
+                break;
+            case 2 :
+                System.out.println("Enter the Radius : ");
+                Circle c = new Circle();
+                c.process();
+                break;
+            default :
+                System.out.println("Try again");
+        }
+
+    }
+}
+Q.49
+===============
+interface Taxable{
+	double salesTax = 0.07;
+	double incomeTax = 1.05;
+	void calcTax();
+}
+
+class Employee implements Taxable{
+	int empId ; 
+	String name ;
+	double salary;
+
+	Employee(int empId , String name , double salary){
+		this.empId = empId ; 
+		this.name = name ;
+		this.salary = salary;
+	}
+	
+	public void calcTax() {
+		
+		double tt = salary * incomeTax;
+        double it = tt - salary;
+
+		System.out.println("Id : "+empId);
+		System.out.println("Name : "+name);
+		System.out.println("Salary : "+salary);
+		System.out.println("Income Tax  : " +it);
+	}
+}
+
+class Product implements Taxable{
+	int pid;
+	double price ; 
+	double quantity;
+
+    Product(int pid, double price, double quantity) {
+		this.pid = pid;
+		this.price = price;
+		this.quantity = quantity;
+	}
+    
+  
+	public void calcTax() {
+		
+		double st = price * salesTax;
+		
+		System.out.println("Product Id : "+pid);
+		System.out.println("Price : "+price);
+		System.out.println("Quantity : "+quantity);
+		System.out.println("Sales Tax  : " +st);
+		
+	}
+	
+}
+
+
+class TaxableQ49{
+    public static void main(String args[]){
+        Employee e = new Employee(101,"Shankar",25000);
+        e.calcTax();
+        System.out.println("==================");
+        Product p = new Product(111,500,2);
+        p.calcTax();
+    }
+}
+Q.50
+===============
+package p;
+
+import java.util.Scanner;
+
+class Employee{
+	private int empId;
+	private String empName;
+	private double salary;
+	
+	public Employee(int empId, String empName, double salary) {
+		super();
+		this.empId = empId;
+		this.empName = empName;
+		this.salary = salary;
+	}
+
+	@Override
+	public String toString() {
+		return "Employee [empId=" + empId + ", empName=" + empName + ", salary=" + salary + "]";
+	}
+
+	public int getid() {
+		
+		return empId;
+	}
+	
+	
+	
+	
+	
+}
+
+public class TostringQ50 {	
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		
+		Employee arr[]=new Employee[5];
+		int count=0;
+		
+		outer:
+		for(int i=0;i<arr.length;i++) {
+			System.out.print("Enter Employee Id : ");
+			int empId=sc.nextInt();
+			System.out.print("Enter Employee Name : ");
+			String empName=sc.next();
+			System.out.print("Enter Employee Salary : ");
+			double salary=sc.nextDouble();
+			
+			for(int j=0;j<count;j++) {
+				int k=arr[j].getid();
+		        if(k==empId) {
+		        	System.out.println("These Employee id already exist:");
+		        	continue outer;
+		        }
+			}
+			
+			
+			Employee e=new Employee(empId,empName,salary);
+			
+			arr[i]=e;
+			count++;
+			i++;
+		}
+		
+		for(Employee a: arr) {
+			System.out.println(a.toString());
+		}
+
+	}
+
+}
+Q.51
+===============
+package p;
+
+import java.util.Scanner;
+
+class Customer{
+	double accountNo;
+	String Name;
+	double balance;
+	
+	Customer(double accountNo,String Name,double balance){
+		this.accountNo=accountNo;
+		this.Name=Name;
+		this.balance=balance;
+	}
+	
+	@Override
+	public String toString() {
+		return "Account No " + accountNo + ", Name=" + Name + ", balance=" + balance;
+	}
+	
+	 double getaccNo() {
+		 return accountNo;
+	 }
+	 
+	 double getbal() {
+		 return balance;
+	 }
+	 
+	 void setbal(double balance) {
+		 this.balance=balance;
+	 }
+	
+}
+
+class savingAcc extends Customer{
+	savingAcc(double accountNo,String Name,double balance){
+		super(accountNo,Name,balance);
+	}
+}
+
+class currentAcc extends Customer{
+	currentAcc(double accountNo,String Name,double balance){
+		super(accountNo,Name,balance);
+	}
+}
+
+public class BankQ51 {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		Customer c[]= new Customer[3];
+		
+		int i=0;
+		
+		while(true) {
+		System.out.println("Enter Your Choice");
+		System.out.println(
+				"1.Add Saving Account Details\n"
+				+ "2.Add Current Account Details\n"
+				+ "3.Enter Amount in Account\n"
+				+ "4.withdraw Amount from Account\n"
+				+ "5.Display Information Of ACcounts\n"
+				+ "6.Display Information Of Particular ACcounts\n"
+				+ "7.Exit");
+		int ch=sc.nextInt();
+		
+		switch(ch) {
+		
+		case 1:{
+			System.out.println("Enter Saving Account details");
+			System.out.println("Enter Saving Account Number");
+			double acc=sc.nextDouble();
+			System.out.println("Enter Account holder Name");
+			String name=sc.next();
+			System.out.println("Enter Salary");
+			double bal=sc.nextDouble();
+			
+			c[i]=new savingAcc(acc,name,bal);
+			i++;}
+			break;
+			
+		case 2:{
+			System.out.println("Enter Current Account details");
+			System.out.println("Enter Current Account Number");
+			double acc=sc.nextDouble();
+			System.out.println("Enter Account holder Name");
+			String name=sc.next();
+			System.out.println("Enter Salary");
+			double bal=sc.nextDouble();
+			
+			c[i]=new currentAcc(acc,name,bal);
+			i++;}
+			break;
+			
+		case 3:	
+			System.out.println("Enter Account Number");
+			double k2=sc.nextDouble();
+			
+			for(Customer cc: c) {
+				if(cc.getaccNo()== k2) {
+					System.out.println("Enter Amount You Want to deposite");
+					double k3=sc.nextDouble();
+					double b=cc.getbal()+k3;
+					cc.setbal(b);
+				}
+			}
+			break;
+			
+		case 4:	
+			System.out.println("Enter Account Number");
+			double k4=sc.nextDouble();
+			
+			for(Customer cc: c) {
+				if(cc.getaccNo()== k4) {
+					System.out.println("Enter Amount You Want to withdraw");
+					double k3=sc.nextDouble();
+					if(cc instanceof savingAcc) {
+					if(cc.getbal()>5000 && cc.getbal()> (5000+k3)) {
+					double b=cc.getbal()-k3;
+					cc.setbal(b);
+					}
+					else {
+						System.out.println("Minimum Balance Is low.Saving Account Minimum balance should be 5000");
+					}}
+					else if(cc instanceof currentAcc) {
+						if(cc.getbal()>1000 && cc.getbal()> (1000+k3)) {
+							double b=cc.getbal()-k3;
+							cc.setbal(b);
+							}
+							else {
+								System.out.println("Minimum Balance Is low.Current Account Minimum balance should be 1000");
+							}
+					}
+				}
+			}
+			break;
+			
+		case 5:	
+			for(Customer cc:c) {
+				if(cc  instanceof savingAcc) {
+				System.out.println("Saving Account DEtails");
+				System.out.println(cc.toString());
+				}
+				else if(cc  instanceof currentAcc) {
+					System.out.println("Current Account DEtails");
+					System.out.println(cc.toString());
+				}
+			}
+			break;
+			
+		case 6:System.out.println("Enter Accout number:\n");{
+		       double k1=sc.nextDouble();
+		       for(Customer cc:c) {
+		    	   if(cc.getaccNo()==k1) {
+		    		   System.out.println(cc.toString());   
+		    	   }
+		       }}
+			break;
+			
+		case 7 :return;	
+		}
+	}
+
+}
+}
+Q.52
+===============
+package p;
+
+import java.util.Scanner;
+public class VowelsQ52 {
+	public static void main(String args[]) {
+	Scanner sc=new Scanner(System.in);
+	int count=0;
+	
+	System.out.println("Enter The String");
+	String str=sc.nextLine();
+	
+	for(int i=0;i<str.length();i++) {
+	  if(
+			  str.charAt(i)=='a' ||
+			  str.charAt(i)=='e' ||
+			  str.charAt(i)=='i' || 
+			  str.charAt(i)=='o' ||
+			  str.charAt(i)=='u' ||
+			  str.charAt(i)=='A' ||
+			  str.charAt(i)=='E' ||
+			  str.charAt(i)=='I' || 
+			  str.charAt(i)=='O' ||
+			  str.charAt(i)=='U'
+			  ) {
+		  
+		  count++;
+	  }
+  }
+  System.out.print("Total Number Of vowels is: "+count);
+}
+}
+Q.53
+===============
+package p;
+
+public class ReverseStringQ53 {
+
+	public static void main(String[] args) {
+
+		
+		String str="Shankar";
+
+				
+		StringBuilder s=new StringBuilder();
+			s.append(str);
+			s=s.reverse();
+			System.out.println(s);
+			
+		StringBuffer ss=new StringBuffer(str);
+		    ss.reverse();
+			System.out.println(ss);
+	
+
+	}
+
+}
+Q.54
+===============
+package p;
+
+import java.util.Scanner;
+
+public class CountwordsQ54 {
+
+	public static void main(String[] args) {
+	  Scanner sc=new Scanner(System.in);
+	  String str1="Hello I am Shankar Lad";
+	  String str2[]=str1.split(" ");
+	  int noOfWords=str2.length;
+	  System.out.print(noOfWords);
+
+	}
+
+}
+Q.55
+===============
+package p;
+
+
+
+public class UpCaseQ55 {
+
+	public static void main(String[] args) {
+		
+		StringBuffer s=new StringBuffer();
+		char ch=' ';
+		String str="shankar lad !! hello how are you ?";
+		for(int i=0;i<str.length();i++) {
+			if(ch==' ' && str.charAt(i)!=' ') 
+				s.append(Character.toUpperCase(str.charAt(i)));
+		   else
+		        s.append(str.charAt(i)); 
+				ch=str.charAt(i);
+			
+		}
+		
+		System.out.print(s);
+
+	}
+
+}
+Q.56
+===============
+package p;
+
+
+
+public class EverywordReverseQ56 {
+
+	public static void main(String[] args) {
+		
+		String str = "Shankar Lad";
+		String reverseWord="";
+		String str1[]=str.split(" ");
+		
+		for(String s:str1) {
+			StringBuilder ss=new StringBuilder(s);
+			ss.reverse();
+			reverseWord+=ss+" ";
+		}
+		System.out.print(reverseWord);
+
+	}
+
+}
+Q.57
+===============
+package p;
+
+import java.util.Scanner;
+
+public class ArrayBoundQ57 {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		String str2[]= {"Sun","Tue","Wed","Thur","Fri","Sat","Mon"};
+		int a=sc.nextInt();
+		for(int i=0;i<str2.length;i++) {
+			if(i==(a-1)) {
+				System.out.print(str2[i]);
+				break;
+			}
+		}
+
+	}
+
+}
+
+
+
+
